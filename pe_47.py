@@ -1,24 +1,8 @@
-import math
-#This provides acces to sqrt
-from math import gcd
 import time
 start_time = time.time()
 
-def is_prime(n):
-    if n == 1:
-        return False
-    if n % 2 == 0:
-        return False
-    i = 3
-    while i * i <= n:
-        if n % i == 0:
-            return False
-        i += 2
-    return True
-
-
 # @timeit
-def prime_factors(n):
+def prime_factors(n):#I took this from https://codereview.stackexchange.com/questions/121862/fast-number-factorization-in-python and modified it (as advised) to make it faster.
     prime_factor_list = []
     while not n % 2:
         prime_factor_list.append(2)
@@ -44,8 +28,6 @@ for k in range(2,max,1):
                 if len(set(prime_factors(k + 3))) > 3:
                     sol = k
                     k = max
-
-#print(prime_factors(997984))
 
 if sol>0:
     print(sol,prime_factors(sol),sol+1,prime_factors(sol+1),sol+2,prime_factors(sol+2),sol+3,prime_factors(sol+3))
