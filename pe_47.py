@@ -2,7 +2,7 @@ import time
 start_time = time.time()
 
 # @timeit
-def prime_factors(n):#I took this from https://codereview.stackexchange.com/questions/121862/fast-number-factorization-in-python and modified it (as advised) to make it faster.
+def prime_factors(n):#This computes the list of prime factors of n. I took it from https://codereview.stackexchange.com/questions/121862/fast-number-factorization-in-python and modified it (as advised) to make it faster.
     prime_factor_list = []
     while not n % 2:
         prime_factor_list.append(2)
